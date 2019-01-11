@@ -20,7 +20,7 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   // rootPage = HelloIonicPage;
-  rootPage = WelcomePage;
+  rootPage = MemberActivationPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
