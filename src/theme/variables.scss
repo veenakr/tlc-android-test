@@ -1,0 +1,299 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+//Fonts
+
+$reg-font-family: Proxima-Nova-Reg;
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+//custom icons
+ion-icon {
+  &[class*="ca-"] {
+    // Instead of using the font-based icons // We're applying SVG masks
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  }
+  input{
+    border-radius: 0px !important;
+  }
+  // custom icons
+  &[class*="ca-star"] {
+    mask-image: url(../assets/icon/star.svg);
+  }
+  &[class*="ca-star-filled"] {
+    mask-image: url(../assets/icon/star-filled.svg);
+    color: #c99700;
+  }
+ 
+  &[class*="ca-upload-icon"] {
+    mask-image: url(../assets/icon/caUploadIcon.svg);
+  }
+  &[class*="ca-down-arrow-yellow-icon"] {
+    mask-image: url(../assets/icon/ca-down-arrow-yellow.svg);
+  }
+  &[class*="ca-up-arrow-yellow-icon"] {
+    mask-image: url(../assets/icon/ca-up-arrow-yellow.svg);
+  }
+  &[class*="ca-calendar-yellow-icon"] {
+    mask-image: url(../assets/icon/ca-calendar-yellow.svg);
+  }
+  &[class*="ca-call"] {
+    mask-image: url(../assets/icon/shape-copy-4.svg);
+  }
+  &[class*="ca-email"] {
+    mask-image: url(../assets/icon/group-23.svg);
+  }
+  &[class*="verified"] {
+    mask-image: url(../assets/icon/verified.svg);
+    width: 22px;
+    height: 22px;
+    background-color: rgba(201, 151, 0, 0.8);
+  }
+  &[class*="ca-info"] {
+    mask-image: url(../assets/icon/info.svg);
+    color: #d4ac33;
+    width: 15px !important;
+    height: 15px !important;
+  }
+  &[class*="ca-edit-icon"] {
+    mask-image: url(../assets/icon/edit.svg);
+  }
+  &[class*="ha-back"] {
+    mask-image: url(../assets/icon/backbutton.svg);
+    color: #000000;
+    font-size: 20px !important;
+  }
+  &[class*="ca-home-on-icon"] {
+    mask-image: url(../assets/icon/home-tab.svg);
+  }
+  &[class*="ca-activity-off-icon"] {
+    mask-image: url(../assets/icon/activities-tab.svg);
+  }
+  &[class*="ca-membership-off-icon"] {
+    mask-image: url(../assets/icon/membership-tab.svg);
+  }
+  &[class*="ca-profile-off-icon"] {
+    mask-image: url(../assets/icon/profile-tab.svg);
+  }
+  &[class*="ca-whatsapp-icon"] {
+    mask-image: url(../assets/icon/group-5.svg);
+  }
+  &[class*="ca-right-arrow-icon"] {
+    mask-image: url(../assets/icon/rightArrow.svg);
+  }
+  &[class*="ca-close-icon"] {
+    mask-image: url(../assets/icon/_ionicons_svg_md-close.svg);
+  }
+  &[class*="ca-stroke-dine"] {
+    mask-image: url(../assets/icon/stroke-dine.svg);
+    color: #c99700;
+  }
+
+  &[class*="ca-stroke-lux"] {
+    mask-image: url(../assets/icon/stroke-bed.svg);
+    color: #c99700;
+  }
+
+  &[class*="ca-stroke-relax"] {
+    mask-image: url(../assets/icon/stroke-flower.svg);
+    color: #c99700;
+  }
+
+  &[class*="ca-stroke-spa"] {
+    mask-image: url(../assets/icon/stroke-footwear.svg);
+    color: #c99700;
+  }
+
+  &[class*="ca-stroke-gift"] {
+    mask-image: url(../assets/icon/stroke-gift.svg);
+    color: #c99700;
+  }
+
+  &[class*="ca-stroke-friend"] {
+    mask-image: url(../assets/icon/stroke-hand.svg);
+    color: #c99700;
+  }
+
+  &[class*="ca-telescope"] {
+    mask-image: url(../assets/icon/telescope.svg);
+    color: #000000;
+    font-size: 35px;
+  }
+
+  &[class*="ca-stroke-buyCards"] {
+    mask-image: url(../assets/icon/group-26.svg);
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+  }
+
+  &[class*="ca-stroke-planCards"] {
+    mask-image: url(../assets/icon/plan-card.svg);
+    color: #c99700;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+  }
+
+  &[class*="ca-gift-memb-card"] {
+    mask-image: url(../assets/icon/stroke-gift.svg);
+    color: #c99700;
+    font-size: 28px;
+  }
+  &[class*="ca-search-icon"] {
+    mask-image: url(../assets/icon/search-icon.svg);
+    font-size: 28px;
+  }
+  &[class*="ca-direction-icon"] {
+    mask-image: url(../assets/icon/directions-icon.svg);
+    font-size: 36px;
+  }
+  &[class*="ca-call-service-icon"] {
+    mask-image: url(../assets/icon/call-orange-icon.svg);
+    font-size: 36px;
+  }
+  &[class*="ca-applauds-icon"] {
+    mask-image: url(../assets/icon/applauds-icon.svg);
+    font-size: 40px;
+  }
+  &[class*="ca-applauds-hand-icon"] {
+    mask-image: url(../assets/icon/applauds-hand.svg);
+    font-size: 20px;
+  }
+  &[class*="ca-activities-hub-icon"] {
+    mask-image: url(../assets/icon/ca-activities-hub.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-social-events-icon"] {
+    mask-image: url(../assets/icon/ca-social-events.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-busn-meeting-icon"] {
+    mask-image: url(../assets/icon/ca-busn-meeting-icon.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-order-in-icon"] {
+    mask-image: url(../assets/icon/ca-order-in-icon.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-travel-icon"] {
+    mask-image: url(../assets/icon/ca-travel-icon.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-personal-serv-icon"] {
+    mask-image: url(../assets/icon/ca-personal-serv-icon.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-add-icon"] {
+    mask-image: url(../assets/icon/add-symbol.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-minus-icon"] {
+    mask-image: url(../assets/icon/minus-symbol.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-wallet-icon"] {
+    mask-image: url(../assets/icon/wallet-icon.svg);
+    color: #c99700; 
+  }
+  &[class*="ca-history-icon"] {
+    mask-image: url(../assets/icon/history-icon.svg);
+    color: #c99700; 
+  }
+}
+
+@import "roboto";
+@import "noto-sans";
+
+.background-properties > .scroll-content {
+  background-blend-mode: multiply !important;
+  background-image: linear-gradient(210deg, #e5e5e5, #ebebeb) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100% !important;
+  padding: 0px;
+  position: relative;
+}

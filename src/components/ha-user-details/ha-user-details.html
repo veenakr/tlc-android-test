@@ -1,0 +1,181 @@
+<ion-card *ngIf="type ==='memberId'" padding [ngClass]="setClasses('memberId')">
+    <div class="memberActivation__verifiedInfo_Container">
+      <ion-card-header class="memberActivation_Card-Header">
+        Enter Membership Number
+      </ion-card-header>
+      <p
+        class="memberActivation__verifiedMemberInfo"
+        *ngIf="this.comdet.memberIdVerified"
+      >
+        {{ this.comdet.memberId }}
+      </p>
+    </div>
+    <ion-icon
+      name="verified"
+      class="memberActivation__verified"
+      *ngIf="this.comdet.memberIdVerified"
+      item-end
+    ></ion-icon>
+    <input
+      class="memberActivation_card-input"
+      type="number"
+      placeholder="12345678"
+      [(ngModel)]="this.comdet.memberId"
+      *ngIf="this.comdet.showBlock === 'memberId'"
+      (change)="verifyMemberId()"
+    />
+  </ion-card>
+<ion-card *ngIf="type ==='mobile'" [ngClass]="setClasses('mobile')">
+  <div padding>
+    <ion-card-header class="memberActivation_Card-Header">
+      Mobile Number
+    </ion-card-header>
+    <div *ngIf="this.comdet.mobileVerified">
+      <p class=" memberActivation__verifiedMemberInfo">{{ this.comdet.mobileNumber }}</p>
+      <div class="MemberActivation__verified_Container">
+        <p>Verified</p>
+        <ion-icon name="verified"></ion-icon>
+      </div>
+    </div>
+
+    <div *ngIf="this.comdet.showBlock === 'mobile'">
+      <div class="memberActivation_card__valueContainer">
+        <p class="memberActivation__verifyType">{{ this.comdet.mobileNumber }}</p>
+        <button
+          ion-button
+          clear
+          class="memberActivation_info_button"
+          (click)="updateMessage(this.comdet.mobileInfoMessage)"
+        >
+          <ion-icon name="ca-info"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.comdet.showBlock === 'mobile'">
+    <span class="memberActivation__otpmessage">{{ this.comdet.message }}</span>
+
+    <div class="memberActivation__otpContainer" id="otp">
+      <div class="memberActivation__otpRequestInputBlock">
+        <div
+          class="memberActivation__requestOtp"
+          (click)="onRequestOtp(otp1, 'mobile')"
+        >
+          {{ this.comdet.otpButton }}
+        </div>
+        <div class="memberActivation__otpInput">
+          <input
+            type="number"
+            name="otp1"
+            #otp1
+            maxlength="1"
+            (keyup)="push(otp1, otp1, otp2)"
+          />
+          <input
+            type="number"
+            name="otp2"
+            #otp2
+            maxlength="1"
+            (keyup)="push(otp1, otp2, otp3)"
+          />
+          <input
+            type="number"
+            name="otp3"
+            #otp3
+            maxlength="1"
+            (keyup)="push(otp2, otp3, otp4)"
+          />
+          <input
+            type="number"
+            name="otp4"
+            #otp4
+            maxlength="1"
+            (keyup)="push(otp3, otp4, null, 'mobile')"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-card>
+<ion-card *ngIf="type ==='email'" [ngClass]="setClasses('email')">
+  <div padding>
+    <ion-card-header class="memberActivation_Card-Header">
+      Email
+    </ion-card-header>
+    <div *ngIf="this.comdet.emailVerified">
+      <p class="memberActivation__verifiedMemberInfo">{{ this.comdet.emailId }}</p>
+      <div class="MemberActivation__verified_Container">
+        <p>Verified</p>
+        <ion-icon name="verified"></ion-icon>
+      </div>
+    </div>
+    <div *ngIf="this.comdet.showBlock === 'email'">
+      <div class="memberActivation_card__valueContainer">
+        <p class="memberActivation__verifyType">{{ this.comdet.emailId }}</p>
+        <button
+          ion-button
+          clear
+          class="memberActivation_info_button"
+          (click)="updateMessage(this.comdet.emailInfoMessage)"
+        >
+          <ion-icon name="ca-info"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.comdet.showBlock === 'email'">
+    <span class="memberActivation__otpmessage">{{ this.comdet.message }}</span>
+    <div class="memberActivation__otpContainer" id="otp">
+      <div class="memberActivation__otpRequestInputBlock">
+        <div
+          class="memberActivation__requestOtp"
+          (click)="onRequestOtp(otp1, 'email')"
+        >
+          {{ this.comdet.otpButton }}
+        </div>
+        <div class="memberActivation__otpInput">
+          <input
+            type="number"
+            name="otp1"
+            #otp1
+            maxlength="1"
+            (keyup)="push(otp1, otp1, otp2)"
+          />
+          <input
+            type="number"
+            name="otp2"
+            #otp2
+            maxlength="1"
+            (keyup)="push(otp1, otp2, otp3)"
+          />
+          <input
+            type="number"
+            name="otp3"
+            #otp3
+            maxlength="1"
+            (keyup)="push(otp2, otp3, otp4)"
+          />
+          <input
+            type="number"
+            name="otp4"
+            #otp4
+            maxlength="1"
+            (keyup)="push(otp3, otp4, null, 'email')"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-card>
+<ion-card *ngIf="type ==='password'" [ngClass]="setClasses('password')">
+  <div padding>
+    <ion-card-header
+      *ngIf="!this.comdet.showPasswordBlock"
+      class="memberActivation_Card-Header"
+      >Set New Password</ion-card-header
+    >
+    <div *ngIf="this.comdet.showPasswordBlock">
+      <ha-password></ha-password>
+    </div>
+  </div>
+</ion-card>

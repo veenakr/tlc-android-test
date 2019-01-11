@@ -1,0 +1,205 @@
+
+page-login {
+  
+  $input-border-btm: 2px solid rgba(155, 155, 155, 0.3);
+  .loginPage-container{
+    overflow: auto;
+    max-height: 100%;
+  }
+  .text-input {
+    font-size: 24px;
+    line-height: 1.25;
+    color: #000000;
+    margin: 0px;
+    height: 100%;
+    border: none;
+  }
+  .country-code{
+    // margin-bottom: 13px;
+    width: 80%;
+   border: none;
+   border-bottom: $input-border-btm;
+   font-size: 28px;
+   overflow: visible;
+   background: #ffffff;
+}
+
+  label {
+    font-size: 16px;
+    color: #b7b8b7;;
+  }
+
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: scroll;
+  }
+
+  .loginPage__input {
+    border: none;
+    border-bottom: solid 1px rgba(151, 151, 151, 0.3) !important;;
+    border-radius: 0px;
+    margin-top: 27px;
+    width: 100%;
+    font-size: 28px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  
+
+  .loginPage_headerContainer {
+    font-family: Proxima-Nova-Reg;
+    font-size: 24px;
+    width: 90%;
+    margin: 10px auto 0px;
+    color: #000000;
+  }
+
+  .loginPage__blocks {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-radius: 7px;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 8px 0 #c2c2c2;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    
+  }
+
+  .loginPage__email {
+    height: 152px;
+    flex-shrink: 0;
+  }
+
+  .loginpage__button--email {
+    font-size: 16px;
+    padding: 0px;
+    margin: 13px 0px 0px;
+    color: #dab500;
+    background: none;
+  }
+
+  .loginPage__mobile {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+  }
+
+  .loginPage__pin-code {
+    width: 22%;
+    margin-right: 20px;
+    padding-left: 0px;
+    display: flex;
+    align-items: flex-end;
+    margin: 0px;
+  }
+
+  .loginPage__number {
+    width: 73%;
+  }
+
+  .loginPage__password {
+    position: relative;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+  }
+
+ 
+
+  .loginpage__button--forgot-password {
+    background: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    color: #c99700;
+    overflow: visible;
+    padding: 0px;
+  }
+
+  .loginpage__button--showPassword {
+    opacity: 0.8;
+    color: #000000;
+    top: 40px;
+    right: 0px;
+    position: absolute;
+  }
+
+  .loginPage__button:nth-child(odd) {
+    border-right: solid 1px rgba(151, 151, 151, 0.3);
+  }
+
+  .loginPage__button {
+    height: 51px;
+    margin: 0px;
+    color: #3e3e3e;
+    width: 49%;
+  }
+
+  .loginPage__button>.button-inner>ion-icon {
+    margin: 0px 10px;
+    font-size: 16px;
+  }
+
+  .loginPage__button--login {
+    margin-top: 20px;
+  }
+
+  .loginPage__pin-code--select {
+    padding: 0px 8px 10px 0px;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    align-items: flex-end;
+    position: relative;
+    max-width: 100%;
+  }
+
+  
+  .loginPage__select select {
+    background: transparent;
+    border: none;
+    -moz-appearance: none;
+   -webkit-appearance: none;
+   appearance: none;
+ }
+.loginPage__select.select__parent {
+    margin-top: 27px;
+    border-bottom-left-radius: 0;
+    border-bottom: 1px solid #9b9b9b;
+    border-bottom-right-radius: 0;
+ }
+.loginPage__select.select__parent select {
+    width: 100%;
+    height: 100%;
+    background: url(../assets/imgs/line-4-copy-2.png ) no-repeat center;
+    background-position-x: 85%;
+    background-position-y: 50%;
+ }
+
+ @media screen and (max-width:330px){
+  .loginpage__button--email {
+    font-size: 14px;
+  }
+  label{
+    font-size: 14px;
+  }
+  .country-code{
+    font-size: 24px;
+  }
+  .loginPage__input{
+    font-size: 24px;
+  }
+  .loginpage__button--forgot-password {
+    font-size: 14px;
+  }
+ }
+
+}

@@ -1,0 +1,21 @@
+<ion-content class="background-properties">
+  <ha-back-button></ha-back-button>
+  <div class="memberActivation__content-container">
+    <header class="memberActivation_Content-Header">Activate Account</header>
+    <ha-user-details [type]="'memberId'"  [nextshowblock]="'mobile'"></ha-user-details> 
+    <ha-user-details [type]="'mobile'" [nextshowblock]="'email'"></ha-user-details> 
+    <ha-user-details [type]="'email'" ></ha-user-details> 
+    <ca-query [queryKind]="'loginQuery'"></ca-query>
+  </div>
+  <button
+    ion-button
+    color="special"
+    class="button--proceed button--proceed--active memberActivation__button--login"
+    large
+    block
+    [disabled]="!this.comdet.emailVerified"
+    (click)="onProceedMemberActivation()"
+  >
+    Proceed
+  </button>
+</ion-content>

@@ -1,0 +1,54 @@
+ca-query {
+    .loginPage__queries {
+        flex-shrink: 0;
+      }
+    
+      .loginPage__queries--header {
+        height: 90px;
+        border-bottom: solid 1px rgba(151, 151, 151, 0.3);
+        height: 37px;
+        padding: 12px 20px 10px;
+      }
+    
+      .loginPage__queries--header>p {
+        font-family: Proxima-Nova-Reg;
+        font-size: 14px;
+        color: #3e3e3e;
+      }
+    
+      .loginPage__queries--buttonContainer {
+        width: 100%;
+      }
+
+      .loginPage__button {
+        height: 51px;
+        margin: 0px;
+        color: #3e3e3e;
+        width: 49%;
+        font-size: 16px;
+        font-family: Proxima-Nova-Reg;
+      }
+      ion-icon{
+        margin: 0px 10px 0px 0px  !important;
+      }
+      .divider{
+        border-right:  solid 1px rgba(151, 151, 151, 0.3) !important;
+      }
+      .membership__queries--header{
+        border-bottom: solid 1px rgba(151, 151, 151, 0.3);
+        height: 46px;
+        padding: 10px 20px;
+        font-size: 12px;
+        line-height: 1.2;
+      }
+
+  @media screen and (max-width:330px){
+    .loginPage__button{
+      font-size: 14px;
+    }
+    .loginPage__queries--header>p {
+      font-size: 12px;
+    }
+
+  }
+}

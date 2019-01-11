@@ -1,0 +1,20 @@
+<!-- Generated template for the CaQueryComponent component -->
+<div class="loginPage__queries common-card">
+  <div #queryTextContent [ngSwitch]="queryKind">
+    <div class="loginPage__queries--header" *ngSwitchCase="'loginQuery'">
+      <p>For login related queries</p>
+    </div>
+    <div class="membership__queries--header" *ngSwitchCase="'membershipQuery'">
+      <p>If you wish to purchase bulk memberships, please 
+          contact our Member Help Desk.</p>
+    </div>
+  </div>
+  <div class="loginPage__queries--buttonContainer">
+    <button ion-button class="loginPage__button divider" type="button" (click)="call()" clear>
+      <ion-icon name="ca-call"></ion-icon>Call
+    </button>
+    <button ion-button class="loginPage__button" type="button" (click)="emailComp()" clear>
+      <ion-icon name="ca-email"></ion-icon> Email
+    </button>
+  </div>
+</div>

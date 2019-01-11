@@ -1,0 +1,9 @@
+
+<button *ngIf="!enroll" ion-button icon-only full class="back__button" (click)="goBack()">
+  <ion-icon name="ha-back"></ion-icon>
+  <ng-content></ng-content>
+</button>
+<button *ngIf="enroll" ion-button icon-only full class="enroll__backButtonBackground" (click)="goBack()">
+  <ion-icon name="ha-back"></ion-icon>
+  <ng-content></ng-content>
+</button>

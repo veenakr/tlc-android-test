@@ -1,0 +1,26 @@
+<ion-content class="welcomepage">
+  <div class="welcomeImageContainer">
+    <img src="assets/imgs/welcome.jpg" alt="backgroundImage" class="welcomepage__image">
+  </div>
+  <div class="welcomePage__buttonContainer">
+    <button
+      ion-button
+      block
+      class="welcomepage__buttons  welcomepage__buttons--login"
+      color="lightdark"
+      (click)="pushPage('login')"
+    >
+      Login
+    </button>
+    <!-- <button
+      ion-button
+      block
+      class="welcomepage__buttons welcomepage__buttons--activate-membership welcomepage__button--direction"
+      color="special"
+      (click)="pushPage('MemberActivation')"
+    >
+      <ion-icon name="ca-star" large></ion-icon>
+      Activate Membership
+    </button> -->
+  </div>
+</ion-content>

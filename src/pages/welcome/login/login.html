@@ -1,0 +1,97 @@
+<ion-content class="background-properties">
+  <!-- <back-button></back-button> -->
+  <div class="loginPage-container">
+    <header class="loginPage_headerContainer">Login</header>
+    <form [formGroup]="LoginForm" (ngSubmit)="onLogin()">
+      <div class="form-group" [ngSwitch]="Login">
+        <div
+          *ngSwitchCase="'EmailLogin'"
+          class="common-card-block"
+        >
+          <label for="email">Enter Email</label>
+          <input
+            name="email"
+            class="loginPage__input form-control"
+            formControlName="email"
+          />
+          <button
+          type="button"
+            class="loginpage__button--email"
+            (click)="changeLoginTo('NumberLogin')"
+          >
+            Login with Mobile
+          </button>
+        </div>
+        <div
+          *ngSwitchCase="'NumberLogin'"
+          class="common-card-block"
+        >
+          <label for="number">Enter Mobile Number </label>
+          <div class="loginPage__mobile">
+            <div class="loginPage__pin-code loginPage__select select__parent">
+              <select class="country-code " type="number">
+                <option value="0">91</option>
+                <option value="1">90</option>
+              </select>
+            </div>
+            <input
+              name="number"
+              type="number"
+              max="10"
+              class="loginPage__number loginPage__input form-control"
+              formControlName="mobile"
+            />
+          </div>
+          <button
+          type="button"
+            class="loginpage__button--email"
+            (click)="changeLoginTo('EmailLogin')"
+          >
+            Login with Email
+          </button>
+        </div>
+      </div>
+      <div class="loginPage__password common-card-block">
+        <label for="password">Enter Password</label>
+        
+        <input
+          name="password"
+          required
+          type="{{type}}"
+          class="loginPage__input form-control"
+          formControlName="password"
+        />
+        <button
+          ion-button
+          clear
+          class="  loginpage__button--showPassword"
+          color="dark"
+          type="button"
+          item-right
+          (click)="showPassword()"
+        >
+          <ion-icon name="{{eyeIcon}}"></ion-icon>
+        </button>
+        <button
+          type="button"
+          class=" loginpage__button--forgot-password"
+          (click)="forgotPassword()"
+        >
+          Forgot Password?
+        </button>
+      </div>
+      <ca-query [queryKind]="'loginQuery'"></ca-query>
+      <button
+        ion-button
+        color="special"
+        class="button--proceed button--proceed--active loginPage__button--login"
+        large
+        block
+        type="submit"
+        (click)="onWrongCredentials()"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+</ion-content>
